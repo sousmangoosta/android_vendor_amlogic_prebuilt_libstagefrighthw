@@ -1,4 +1,4 @@
-#ifeq (,$(wildcard hardware/amlogic/omx))
+ifeq (,$(wildcard hardware/amlogic/omx))
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -197,4 +197,4 @@ include $(BUILD_PREBUILT)
 
 endif
 
-#endif
+endif
