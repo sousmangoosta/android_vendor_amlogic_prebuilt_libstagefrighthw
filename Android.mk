@@ -145,6 +145,9 @@ LOCAL_SRC_FILES_arm := lib/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 LOCAL_SRC_FILES_arm64 := lib64/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 include $(BUILD_PREBUILT)
 
+endif
+
+ifeq (,$(wildcard vendor/amlogic/widevine))
 ############OV###################
 ifeq ($(BOARD_OMX_WITH_TVP),true)
 include $(CLEAR_VARS)
@@ -196,5 +199,5 @@ LOCAL_STRIP_MODULE := false
 include $(BUILD_PREBUILT)
 
 endif
-
 endif
+
