@@ -1,3 +1,4 @@
+ifneq ($(MEDIA_PREBUILT_BUILD_TYPE), source)
 ifeq (,$(wildcard hardware/amlogic/omx))
 LOCAL_PATH := $(call my-dir)
 
@@ -201,4 +202,5 @@ LOCAL_SRC_FILES_arm := lib/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 LOCAL_SRC_FILES_arm64 := lib64/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 include $(BUILD_PREBUILT)
 
+endif
 endif
